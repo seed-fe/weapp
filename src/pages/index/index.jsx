@@ -23,7 +23,7 @@ export default class Index extends Component {
     e.preventDefault()
 
     const { formTitle: title, formContent: content } = this.state
-    const newPosts = this.state.posts.concat({ title, content })
+    const newPosts = this.state.posts.concat({ title, content }) // 不会更改现有数组，而是返回一个新数组
 
     this.setState({
       posts: newPosts,
